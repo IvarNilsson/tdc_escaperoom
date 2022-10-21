@@ -9,8 +9,8 @@
 #include <WiFi.h>
 
 // WiFi credentials
-const char* ssid = "AASUS";
-const char* password = "IvarNilsson/731";
+const char* ssid = "";
+const char* password = "";
 
 int ledRed = 14;
 int ledYellow = 27;
@@ -63,7 +63,7 @@ void loop() {
 void writeF2() {
   if (WiFi.status() == WL_CONNECTED) {
     HTTPClient http;
-    String url = "https://script.google.com/macros/s/AKfycbydSyxiUWwbKO6Roe26yosra6bV1KymxGhokLHnPt8XbowN29pdmJFksuYjcgeWjva3/exec?F2=1";
+    String url = "";
     Serial.println("Making a request");
     http.begin(url.c_str()); //Specify the URL and certificate
     http.setFollowRedirects(HTTPC_STRICT_FOLLOW_REDIRECTS);
